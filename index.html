@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunch Tomorrow, Sharlene? 🥺</title>
+    <!-- Google Fonts for beautiful typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Canvas Confetti for celebration -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- Floating hearts container background -->
+    <div class="hearts-background" id="heartsBg"></div>
+
+    <div class="app-container">
+        <!-- Main Invitation Card -->
+        <div class="card" id="inviteCard">
+            <div class="card-inner">
+                <div class="image-wrapper">
+                    <img src="assets/lunch_illustration.jpg" alt="Cute couple eating lunch" class="sticker-img">
+                </div>
+                <h1 class="question-title">Are you still down to go for lunch tomorrow, Sharlene? 🥺</h1>
+                <p class="question-subtitle">I've got a perfect place in mind!</p>
+                
+                <div class="btn-group" id="btnGroup">
+                    <button class="btn btn-yes" id="yesBtn">Yes, absolutely! 💖</button>
+                    <button class="btn btn-no" id="noBtn">No 😢</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Card (Hidden initially) -->
+        <div class="card success-card" id="successCard" style="display: none;">
+            <div class="card-inner">
+                <div class="success-icon-wrapper">
+                    <div class="heart-pulse">💖</div>
+                </div>
+                <h1 class="success-title">Yayyy! It's a date! 🎉</h1>
+                <p class="success-message">You made the right choice (not like you had another option anyway 😉). I'll pick you up at 12:00 PM!</p>
+                
+                <div class="date-details">
+                    <div class="detail-item">
+                        <span class="icon">📅</span>
+                        <span class="text">Tomorrow</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="icon">⏰</span>
+                        <span class="text">12:00 PM</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="icon">📍</span>
+                        <span class="text">Your favorite spot</span>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Confirmation Link -->
+                <a href="https://api.whatsapp.com/send?phone=254711490732&text=Yes!%20I'm%20excited%20for%20lunch%20tomorrow%20at%2012:00%20PM!%20❤️" target="_blank" class="btn-whatsapp" id="waBtn">Send WhatsApp Confirmation 📱</a>
+
+                <p class="footer-note" style="margin-top: 20px;">Can't wait to see you! 🥰</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript logic -->
+    <script src="script.js"></script>
+</body>
+</html>
