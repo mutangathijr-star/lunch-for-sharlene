@@ -105,21 +105,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const bubble = document.createElement("div");
         const warningIndex = Math.min(evasionCount - 1, warningMessages.length - 1);
         bubble.innerText = warningMessages[warningIndex];
-        bubble.style.position = "fixed";
+        bubble.style.position = "absolute";
         bubble.style.background = "#ff6b8b";
         bubble.style.color = "#fff";
         bubble.style.padding = "10px 20px";
         bubble.style.borderRadius = "20px";
-        
-        // Position it right above the card
-        const cardRect = inviteCard.getBoundingClientRect();
-        bubble.style.top = `${cardRect.top - 50}px`;
+        bubble.style.top = "-25px"; // Positioned exactly above the card top border
         bubble.style.left = "50%";
         bubble.style.transform = "translateX(-50%)";
         bubble.style.zIndex = "999";
         bubble.style.boxShadow = "0 4px 15px rgba(0,0,0,0.15)";
+        bubble.style.whiteSpace = "nowrap"; // Keep it on one line
         bubble.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-        document.body.appendChild(bubble);
+        inviteCard.appendChild(bubble);
 
         // Fade out and remove warning bubble
         setTimeout(() => {
